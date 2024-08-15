@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Indian Flag</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>दिंडोरी प्रणित श्री स्वामी समर्थ सेवा केंद्र अंबरनाथ</h1>
+  </header>
+
+  <!-- Flag -->
+  <div class="flag">
+    <div class="saffron flag-item"></div>
+    <div class="white flag-item">
+      <div class="circle">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </div>
+    </div>
+    <div class="green flag-item"></div>
+    <div class="flag-wave"></div>
+  </div>
+
+  <h2 id="animated"></h2>
+  <button onclick="playAudio()">Play Music</button>
+
+  <audio id="patriotic-song" loop>
+    <source src="Song/Desh Mere - Bhuj The Pride Of India 128 Kbps.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <script src="./script.js"></script>
+</body>
+</html>

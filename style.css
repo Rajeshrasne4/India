@@ -1,0 +1,339 @@
+
+  /* General styles */
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Header Styles */
+  header h1 {
+    background-color: rgb(244, 196, 48); /* Golden background */
+    height: 70px;
+    font-size: 3vw; /* Use viewport width for responsive font size */
+    color: #ffffff; /* White text */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.6; /* Dynamic line height */
+    text-shadow: 1px 1px 2px rgb(12, 10, 10), 2px 2px 4px rgb(17, 16, 16); /* Red shadow effect */
+    border-radius: 10px; /* Rounded corners */
+    background-image: linear-gradient(45deg, #ffba08, #f09300); /* Gradient background */
+    animation: glow infinite infinite alternate; /* Subtle glow animation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transition: all 0.1s ease-in-out; /* Smooth transition on hover */
+  }
+
+  /* Glow Animation */
+  @keyframes glow {
+    0% {
+      text-shadow: 1px 1px 8px rgb(12, 10, 10), 2px 2px 8px rgb(17, 16, 16); /* White glow */
+    }
+    100% {
+      text-shadow: 2px 2px 6px rgb(182, 42, 42), 3px 3px 12px rgb(182, 42, 42); /* Red glow */
+    }
+  }
+
+  /* Hover effect */
+  header h1:hover {
+    background-image: linear-gradient(45deg, #f09300, #ffba08); /* Gradient reverses on hover */
+    color: #ffe5b4; /* Light golden text */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+  }
+
+  /* Responsive Design with Media Queries */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 6vw; /* Adjust font size for tablets */
+      line-height: 1.3; /* Adjust line height for smaller screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 8vw; /* Further adjust for mobile phones */
+      line-height: 1.4;
+      height: auto; /* Adjust height to fit content */
+      padding: 10px; /* Add padding for better spacing */
+    }
+  }
+
+
+  @media (max-width: 1200px) {
+    header h1 {
+      font-size: 4vw; /* Adjust for large screens like tablets */
+    }
+  }
+
+  @media (max-width: 992px) {
+    header h1 {
+      font-size: 5vw; /* Adjust for medium screens like tablets */
+    }
+  }
+
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 6vw; /* Adjust for small screens like mobile phones */
+    }
+  }
+
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 7vw; /* Further adjust for extra small screens */
+      padding: 10px; /* Add padding for better spacing */
+    }
+  }
+
+
+
+  .flag {
+    margin: 30px 0 30px 5%; /* Left margin set to 20% */
+    position: relative;
+    width: 250px;
+    height: 150px;
+    -webkit-perspective: 1000px;
+    -webkit-transform-style: preserve3d;
+    -webkit-transform-origin: 0 250px;
+    -webkit-transform: translate3d(0, 0, 0) rotateZ(0deg) rotateY(-22deg);
+    -webkit-animation-name: wave;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-timing-function: cubic-bezier(0.16, 0.14, 0.82, 0.73);
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    perspective: 1000px;
+    transform-style: preserve3d;
+    transform-origin: 0 250px;
+    transform: translate3d(0, 0, 0) rotateZ(0deg) rotateY(-22deg);
+    animation-name: wave;
+    animation-duration: 8s;
+    animation-timing-function: cubic-bezier(0.16, 0.14, 0.82, 0.73);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  /* Flag pole */
+  .flag:before {
+    position: absolute;
+    content: "";
+    height: 400px;
+    left: -5px;
+    top: -3px;
+    width: 8px;
+    border-right: 1px solid #FFF;
+    border-radius: 3px;
+    background-color: #422;
+    box-shadow: -3px 3px 8px 0px rgba(0, 0, 0, 0.4);
+
+  }
+
+  /* Flag colors */
+  .white {
+    background: #FFF;
+  }
+
+  .green {
+    background: #006400;
+  }
+
+  .saffron {
+    background: #F93;
+  }
+
+  .flag-item {
+    height: 33.33%;
+    box-sizing: border-box;
+  }
+
+  /* Flag wave animation */
+  .flag-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 200%;
+    -webkit-animation-name: air;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-timing-function: cubic-bezier(0.16, 0.14, 0.82, 0.73);
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  /* Ashoka Chakra (circle in the middle) */
+  .circle {
+    width: 47px;
+    height: 47px;
+    border: 2px solid #000080;
+    border-radius: 50%;
+    position: absolute;
+    left: 40%;
+    -webkit-animation: circle 5s infinite;
+    animation: circle 10s linear 2s infinite;
+  }
+
+  .circle:after {
+    content: "";
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #00080;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+  }
+
+  .bar {
+    position: absolute;
+    display: inline-block;
+    height: 47px;
+    width: 2px;
+    background: #000080;
+    left: 47%;
+  }
+
+  /* Rotation of Ashoka Chakra bars */
+  .bar:nth-child(1) { transform: rotate(15deg); }
+  .bar:nth-child(2) { transform: rotate(30deg); }
+  .bar:nth-child(3) { transform: rotate(45deg); }
+  .bar:nth-child(4) { transform: rotate(60deg); }
+  .bar:nth-child(5) { transform: rotate(75deg); }
+  .bar:nth-child(6) { transform: rotate(90deg); }
+  .bar:nth-child(7) { transform: rotate(105deg); }
+  .bar:nth-child(8) { transform: rotate(120deg); }
+  .bar:nth-child(9) { transform: rotate(135deg); }
+  .bar:nth-child(10) { transform: rotate(150deg); }
+  .bar:nth-child(11) { transform: rotate(165deg); }
+
+  /* Keyframes for Ashoka Chakra rotation */
+  @-webkit-keyframes circle {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes circle {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Keyframes for flag waving animation */
+  @-webkit-keyframes wave {
+    0% { transform: translate3d(0, 0, 0) rotateY(22deg); }
+    20% { transform: translate3d(0, 0, 0) rotateY(0deg); }
+    40% { transform: translate3d(0, 0, 0) rotateY(-22deg); }
+    60% { transform: translate3d(0, 0, 0) rotateY(0deg); }
+    80% { transform: translate3d(0, 0, 0) rotateY(16deg); }
+    100% { transform: translate3d(0, 0, 0) rotateY(22deg); }
+  }
+
+  /* Keyframes for air movement on the flag */
+  @-webkit-keyframes air {
+    0% { background-position: -200% 0px; }
+    30% { background-position: -60% 5px; }
+    70% { background-position: 70% -5px; }
+    100% { background-position: 200% 0px; }
+  }
+
+  /* Info text */
+  .info {
+    text-align: center;
+    margin-top: 320px;
+  }
+
+  .info a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #f4645f;
+    font-weight: 700;
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .flag {
+      width: 200px;
+      height: 120px;
+      margin-left: 10%; /* Adjust left margin for smaller screens */
+    }
+
+    .circle {
+      width: 35px;
+      height: 35px;
+    }
+
+    .bar {
+      height: 35px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .flag {
+      width: 150px;
+      height: 100px;
+      margin-left: 5%; /* Adjust left margin for mobile screens */
+    }
+
+    .circle {
+      width: 30px;
+      height: 30px;
+    }
+
+    .bar {
+      height: 30px;
+    }
+  }
+
+
+
+/* Animated Text Styles */
+.animated-text {
+  margin: 20px;
+  padding: 10px;
+}
+.animated-text h2 {
+  font-size: 2.5vw; /* Responsive font size based on viewport width */
+  color: #ff5733; /* Bright color for visibility */
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: textGlow 2s infinite alternate, textWave 3s infinite ease-in-out; /* Animations */
+}
+
+/* Keyframes for Animated Text */
+@keyframes textGlow {
+  0% { text-shadow: 0 0 5px #ff5733, 0 0 10px #ff5733; }
+  100% { text-shadow: 0 0 10px #ff5733, 0 0 20px #ff5733; }
+}
+
+@keyframes textWave {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+h2{
+  margin-top:2rem;
+}
+
+.wavy1 {
+  animation-name: wavy;
+  animation-duration: 1.3s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+@keyframes wavy {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -15px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+#animated{
+  color: red;
+}
