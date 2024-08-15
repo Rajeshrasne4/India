@@ -314,15 +314,34 @@ h2{
   font-size: 3em;
 }
 
+
+button {
+  font-size: 1.5em;
+  padding: 10px 20px; /* Default padding for larger screens */
+}
+
+
+/* Tablet screens (up to 768px wide) */
 @media (max-width: 768px) {
   h2 {
-    font-size: 2em; /* Adjust size for smaller screens like tablets */
+    font-size: 1.5em;
+  }
+
+  button {
+    font-size: 1.2em;
+    padding: 8px 16px;
   }
 }
 
+/* Mobile devices (up to 480px wide) */
 @media (max-width: 480px) {
   h2 {
-    font-size: 1.6em; /* Adjust size for mobile devices */
+    font-size: 1.2em;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 6px 12px;
   }
 }
 
@@ -353,19 +372,3 @@ h2{
 }
 
 
-button {
-  font-size: 3em;
-  padding: 10px 20px; /* Default padding for larger screens */
-}
-
-/* Tablet screens (up to 768px wide) */
-@media (max-width: 768px) {
-  h2 {
-    font-size: 2em;
-  }
-
-  button {
-    font-size: 1.9em;
-    padding: 8px 16px;
-  }
-}
