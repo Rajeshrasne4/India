@@ -311,7 +311,21 @@
 
 h2{
   margin-top:2rem;
+  font-size: 2em;
 }
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5em; /* Adjust size for smaller screens like tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.2em; /* Adjust size for mobile devices */
+  }
+}
+
 
 .wavy1 {
   animation-name: wavy;
