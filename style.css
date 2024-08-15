@@ -351,3 +351,21 @@ h2{
 #animated{
   color: red;
 }
+
+
+button {
+  font-size: 3em;
+  padding: 10px 20px; /* Default padding for larger screens */
+}
+
+/* Tablet screens (up to 768px wide) */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2em;
+  }
+
+  button {
+    font-size: 1.9em;
+    padding: 8px 16px;
+  }
+}
