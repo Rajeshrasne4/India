@@ -310,19 +310,19 @@
 }
 
 h2{
-  margin-top:2rem;
-  font-size: 2em;
+  margin-top:3rem;
+  font-size: 3em;
 }
 
 @media (max-width: 768px) {
   h2 {
-    font-size: 1.5em; /* Adjust size for smaller screens like tablets */
+    font-size: 2em; /* Adjust size for smaller screens like tablets */
   }
 }
 
 @media (max-width: 480px) {
   h2 {
-    font-size: 1.2em; /* Adjust size for mobile devices */
+    font-size: 1.6em; /* Adjust size for mobile devices */
   }
 }
 
